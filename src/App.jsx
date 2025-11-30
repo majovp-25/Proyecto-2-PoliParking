@@ -1,8 +1,16 @@
+import Header from "./components/header/Header";
+import About from "./components/about/About";
+
 function App() {
 
   return (
-    <h1>Componente Principal APP</h1>
+    <>
+      <Header/>
+      <About/>
+    </>
   )
 }
 
 export default App
+
+

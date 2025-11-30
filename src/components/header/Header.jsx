@@ -1,31 +1,24 @@
-import React from "react";
-import "./Header.css";
-
-const logoUrl =
-    "https://upload.wikimedia.org/wikipedia/commons/5/51/Escuela_Polit%C3%A9cnica_Nacional.png";
+import { Main } from '../main/Main';
+import './Header.css';
 
 const Header = () => {
     return (
-    <header className="header">
-        <div className="header-left">
-        <img src={logoUrl} alt="Logo EPN" className="logo" />
 
-        <div className="header-text">
-            <h1 className="header-title">PoliParking</h1>
-            <p className="header-subtitle">Sistema de parqueaderos EPN</p>
-        </div>
-        </div>
+        <header>
+            <nav class="navbar__container">
+                <p class="navbar__logo">PoliParking</p>
+                <ul class="navbar__menu">
+                    <li><a href="#navbar">Inicio</a></li>
+                    <li><a href="#bout">Sobre mí</a></li>
+                    <li><a href="#portfolio">Proyectos</a></li>
+                    <li><a href="#expert">Experticia</a></li>
+                    <li><a href="#contact">Contacto</a></li>
+                </ul>
+            </nav>
+            <Main />
+        </header>
 
-        <nav className="navbar__container">
-        <ul>
-            <li><a href="#">Inicio</a></li>
-            <li><a href="#">Reservas</a></li>
-            <li><a href="#">Registro</a></li>
-            <li><a href="#">Contacto</a></li>
-        </ul>
-        </nav>
-    </header>
-    );
-};
+    )
+}
 
-export default Header;
+export default Header
