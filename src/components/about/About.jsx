@@ -1,5 +1,4 @@
 import './About.css';
-import teamImg from '../../assets/react.svg'; // Podemos tomarnos una foto en grupo y ponerla aqui
 
 const About = () => {
     return (
@@ -17,8 +16,7 @@ const About = () => {
                 </div>
 
                 <figure className="about__figure">
-                    {/* Aqui podemos poner una foto nuestra */}
-                    <img src={teamImg} className="about__picture" alt="Equipo de Desarrollo" style={{width: '200px'}} />
+                    <img src="/src/assets/desarrolladores.jpg" className="about__picture" alt="Equipo de Desarrollo"/>
                 </figure>
             </div>
         </section>
