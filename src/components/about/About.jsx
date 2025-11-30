@@ -1,4 +1,5 @@
 import './About.css';
+import desarrolladores from '../../assets/desarrolladores.jpg';
 
 const About = () => {
     return (
@@ -16,7 +17,7 @@ const About = () => {
                 </div>
 
                 <figure className="about__figure">
-                    <img src="/src/assets/desarrolladores.jpg" className="about__picture" alt="Equipo de Desarrollo"/>
+                    <img src={desarrolladores} className="about__picture" alt="Equipo de Desarrollo"/>
                 </figure>
             </div>
         </section>
