@@ -1,13 +1,8 @@
-import Header from "./components/header/Header";
-import Main from "./components/main/Main";
-
 function App() {
+
   return (
-    <>
-      <Header />
-      <Main />
-    </>
-  );
+    <h1>Componente Principal APP</h1>
+  )
 }
 
-export default App;
+export default App
