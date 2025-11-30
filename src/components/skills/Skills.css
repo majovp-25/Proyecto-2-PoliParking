@@ -1,0 +1,60 @@
+.skills {
+    padding: 5rem 0;
+    background-color: var(--colorFondoGris);
+    text-align: center;
+}
+
+.center { text-align: center; }
+
+.skills__container {
+    width: 90%;
+    max-width: 1000px;
+    margin: 3rem auto 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2.5rem;
+}
+
+.skill__category {
+    background: var(--colorBlanco);
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    border-top: 5px solid var(--colorPrincipal); /* Detalle azul arriba */
+    text-align: left;
+    transition: transform 0.3s;
+}
+
+.skill__category:hover {
+    transform: translateY(-5px);
+}
+
+.skill__category h3 {
+    color: var(--colorPrincipal);
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 0.5rem;
+}
+
+.skill__category h3 i {
+    color: var(--colorSecundario);
+    margin-right: 10px;
+}
+
+.tech__list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+}
+
+/* Estilo tipo "Etiqueta" o "Chip" */
+.tech__tag {
+    background-color: #eef2f5;
+    color: var(--colorTexto);
+    padding: 0.5rem 1rem;
+    border-radius: 50px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    border: 1px solid #ddd;
+}

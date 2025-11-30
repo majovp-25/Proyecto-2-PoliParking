@@ -3,21 +3,20 @@ import './Header.css';
 
 const Header = () => {
     return (
-
-        <header>
-            <nav class="navbar__container">
-                <p class="navbar__logo">PoliParking</p>
-                <ul class="navbar__menu">
+        <header id="navbar">
+            <nav className="navbar__container">
+                <p className="navbar__logo">Poli<span>Parking</span></p>
+                <ul className="navbar__menu">
                     <li><a href="#navbar">Inicio</a></li>
-                    <li><a href="#bout">Sobre mí</a></li>
-                    <li><a href="#portfolio">Proyectos</a></li>
+                    <li><a href="#about">Sobre Nosotros</a></li>
                     <li><a href="#expert">Experticia</a></li>
+                    <li><a href="#portfolio">Proyectos</a></li>
                     <li><a href="#contact">Contacto</a></li>
                 </ul>
             </nav>
+            {}
             <Main />
         </header>
-
     )
 }
 

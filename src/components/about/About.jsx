@@ -1,26 +1,27 @@
 import './About.css';
-import girl from '../../assets/girl.svg';
-
+import teamImg from '../../assets/react.svg'; // Podemos tomarnos una foto en grupo y ponerla aqui
 
 const About = () => {
     return (
         <section id="about" className="about">
-            <div className="about__content">
-                <h2 className="about__title">About me</h2>
-                <p className="about__paragraph">
-                    I’m a software developer with a strong passion for building user-friendly and efficient web applications. I specialize in modern technologies such as React, Node.js, and UI/UX design, and I’m always focused on delivering clean, responsive, and accessible solutions.
-                </p>
-                <p className="about__paragraph">
-                    I'm constantly learning and staying up to date with the latest trends in web development, and I enjoy working on projects that challenge me to grow both technically and creatively.
-                </p>
-                <a href="#" className="btn btn__light">Check my Github</a>
+            <div className="about__container">
+                <div className="about__content">
+                    <h2 className="section__title">Sobre <span>Nosotros</span></h2>
+                    <p className="about__paragraph">
+                        Somos un equipo de desarrolladores de software de la EPN, unidos por la pasión de crear aplicaciones web intuitivas y eficientes.
+                    </p>
+                    <p className="about__paragraph">
+                        Nos especializamos en metodologías ágiles y tecnologías modernas, buscando siempre resolver problemas reales de nuestra comunidad universitaria a través del código.
+                    </p>
+                    <a href="https://github.com/" target="_blank" className="btn btn__primary">Nuestro Github</a>
+                </div>
+
+                <figure className="about__figure">
+                    {/* Aqui podemos poner una foto nuestra */}
+                    <img src={teamImg} className="about__picture" alt="Equipo de Desarrollo" style={{width: '200px'}} />
+                </figure>
             </div>
-
-            <figure className="about__figure">
-                <img src={girl} className="about__picture" alt="chica-code" />
-            </figure>
         </section>
-
     )
 }
 
