@@ -1,18 +1,23 @@
-import Header from './components/header/Header';
-import About from './components/about/About';
-import Skills from './components/skills/Skills';
-import Projects from './components/projects/Projects';
-import './App.css';
+
+import { BrowserRouter, Route, Routes } from "react-router-dom"; 
+
+import Landing from "./pages/Landing";
+import Register from "./pages/Register";
+import Dashboard from "./pages/Dashboard";
+import NotFound from "./pages/NotFound";
+import Login from "./pages/Login";
 
 function App() {
   return (
-    <>
-      <Header />
-      <About />
-      <Skills />
-      <Projects />
-    </>
+    <BrowserRouter>
+      <Routes>
+        <Route index element={<Landing />} />
+        <Route path="login" element={<Login />} />
+        <Route path="register" element={<Register />} />
+        <Route path="dashboard" element={<Dashboard />} />
+        <Route path='*' element={<NotFound />} />
+      </Routes>
+    </BrowserRouter>
   )
 }
-
 export default App

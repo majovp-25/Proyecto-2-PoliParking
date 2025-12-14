@@ -1,42 +1,97 @@
 .about {
-    background-color: var(--colorBlanco);
-    padding: 5rem 0;
+    position: relative; 
+    background: linear-gradient(135deg, #0f172a 0%, #052033 100%);
+    padding: 6rem 0;
+    color: white;
+    overflow: hidden; 
+}
+
+.about::before {
+    content: '';
+    position: absolute;
+    top: 0; 
+    left: 0; 
+    width: 100%; 
+    height: 100%;
+    background-image: url('https://www.transparenttextures.com/patterns/cubes.png'); 
+    opacity: 0.1; 
+    pointer-events: none;
+    z-index: 1;
 }
 
 .about__container {
+    position: relative;
+    z-index: 2; 
     width: 90%;
     max-width: 1200px;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 3rem;
+    gap: 4rem;
 }
 
 .section__title {
     font-family: 'Roboto', sans-serif;
-    font-size: 2.5rem;
-    color: var(--colorPrincipal);
+    font-size: 3rem;
     margin-bottom: 1.5rem;
     font-weight: 800;
+    color: white;
 }
-.section__title span { color: var(--colorSecundario); }
+.section__title span { color: #f59e0b; }
 
 .about__paragraph {
-    font-size: 1.1rem;
-    color: var(--colorTexto);
+    font-size: 1.15rem;
+    color: #cbd5e1;
     margin-bottom: 1.5rem;
     line-height: 1.8;
+    max-width: 600px;
 }
 
-.about__figure { width: 100%; max-width: 400px; }
-.about__picture { width: 100%; height: auto; }
+.about__figure {
+    width: 100%;
+    max-width: 500px;
+    position: relative;
+}
+
+.about__picture {
+    width: 100%;
+    height: auto;
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+    transition: transform 0.3s ease;
+}
+
+.about__picture:hover {
+    transform: scale(1.02);
+}
+
+.btn__primary {
+    display: inline-block;
+    background-color: #f59e0b;
+    color: #052033;
+    padding: 1rem 2.5rem;
+    border-radius: 50px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    margin-top: 1rem;
+    box-shadow: 0 4px 15px rgba(245, 158, 11, 0.3);
+}
+
+.btn__primary:hover {
+    background-color: #fbbf24;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(245, 158, 11, 0.5);
+    color: #000;
+}
 
 @media(min-width: 768px){
     .about__container {
         flex-direction: row;
         text-align: left;
+        align-items: center;
     }
     .about__content { flex: 1; }
-    .about__figure { flex: 1; display: flex; justify-content: center; }
+    .about__figure { flex: 1; display: flex; justify-content: flex-end; }
 }

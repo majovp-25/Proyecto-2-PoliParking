@@ -1,20 +1,21 @@
 header {
     width: 100%;
     min-height: 100vh;
-    /* Degradado azul PoliParking */
-    background: linear-gradient(135deg, var(--colorPrincipal) 0%, #052033 100%);
-    color: var(--colorBlanco);
+    background: linear-gradient(135deg, #0f172a 0%, #052033 100%);
+    color: #ffffff;
     display: flex;
     flex-direction: column;
     position: relative;
+    font-family: 'Segoe UI', Roboto, sans-serif;
+    border-bottom: 5px solid #f59e0b; 
+    box-sizing: border-box; 
 }
 
-/* Decoración opcional de fondo */
 header::before {
     content: '';
     position: absolute;
     top: 0; left: 0; width: 100%; height: 100%;
-    background-image: url('https://www.transparenttextures.com/patterns/cubes.png'); /* Textura sutil */
+    background-image: url('https://www.transparenttextures.com/patterns/cubes.png'); 
     opacity: 0.1;
     pointer-events: none;
 }
@@ -23,39 +24,66 @@ header::before {
     width: 90%;
     max-width: 1200px;
     margin: 0 auto;
-    text-align: center;
     padding: 1.5rem 0;
     z-index: 10;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .navbar__logo {
     margin: 0;
-    font-family: 'Roboto', sans-serif;
-    font-size: 1.8rem;
+    font-size: 2rem;
     font-weight: 900;
-    color: var(--colorBlanco);
+    color: #ffffff;
+    text-transform: uppercase;
+    letter-spacing: -1px;
 }
-.navbar__logo span { color: var(--colorSecundario); }
+
+.navbar__logo span { 
+    color: #f59e0b; 
+}
+
+.navbar__menu {
+    list-style: none;
+    display: none;
+}
 
 .navbar__menu a {
-    color: rgba(255, 255, 255, 0.8);
-    font-size: 1.1rem;
-    font-weight: 500;
-    transition: color 0.3s;
+    color: #cbd5e1;
+    font-size: 1.05rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: color 0.3s ease;
 }
 
 .navbar__menu a:hover {
-    color: var(--colorSecundario);
+    color: #f59e0b;
+}
+
+.nav-btn {
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.highlight {
+    background-color: #f59e0b;
+    color: #052033 !important;
+    padding: 0.6rem 1.2rem;
+    border-radius: 50px;
+}
+
+.highlight:hover {
+    background-color: #fbbf24;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(245, 158, 11, 0.3);
 }
 
 @media(min-width: 768px){
-    .navbar__container {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
     .navbar__menu {
         display: flex;
         gap: 2rem;
+        align-items: center;
     }
 }

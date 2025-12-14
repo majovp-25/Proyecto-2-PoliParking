@@ -1,37 +1,123 @@
 .principal {
-    flex: 1;
+    position: relative;
+    height: 90vh;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
-    width: 90%;
-    margin: 0 auto;
-    z-index: 5;
+    background-color: #052033;
+    color: white;
+    overflow: hidden;
+}
+
+.principal::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background-image: url('https://www.transparenttextures.com/patterns/cubes.png');
+    opacity: 0.1;
+    pointer-events: none;
+}
+
+.principal__overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at top right, rgba(245, 158, 11, 0.1), transparent 40%);
+    pointer-events: none;
+    z-index: 1;
 }
 
 .principal__content {
-    max-width: 800px;
+    max-width: 900px;
+    z-index: 2;
+    padding: 2rem;
+    animation: fadeInUp 1s ease-out;
+    position: relative;
 }
 
 .principal__title {
-    font-family: 'Roboto', sans-serif;
-    font-size: 2.5rem;
+    font-family: 'Segoe UI', Roboto, sans-serif;
+    font-size: 3rem;
     font-weight: 800;
-    margin-bottom: 1rem;
-    line-height: 1.2;
+    margin-bottom: 1.5rem;
+    line-height: 1.1;
+    letter-spacing: -1px;
 }
 
 .principal__title span {
-    color: var(--colorSecundario);
+    color: #f59e0b;
+    background: -webkit-linear-gradient(45deg, #f59e0b, #fbbf24);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .principal__description {
-    font-size: 1.2rem;
-    margin-bottom: 2rem;
-    opacity: 0.9;
+    font-size: 1.25rem;
+    margin-bottom: 2.5rem;
+    color: #cbd5e1;
+    line-height: 1.6;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.principal__description strong {
+    color: white;
+    font-weight: 700;
+}
+
+.principal__buttons {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.btn__primary {
+    background-color: #f59e0b;
+    color: #052033;
+    padding: 1rem 2.5rem;
+    border-radius: 50px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(245, 158, 11, 0.3);
+    border: 2px solid transparent;
+}
+
+.btn__primary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(245, 158, 11, 0.6);
+    background-color: #fbbf24;
+    color: #000000;
+}
+
+.btn__outline {
+    border: 2px solid rgba(255,255,255,0.2);
+    color: white;
+    padding: 1rem 2.5rem;
+    border-radius: 50px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.btn__outline:hover {
+    border-color: #f59e0b;
+    background-color: rgba(245, 158, 11, 0.1);
+    color: #f59e0b;
+}
+
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
 }
 
 @media(min-width: 768px){
-    .principal__title { font-size: 4rem; }
+    .principal__title { font-size: 5rem; }
     .principal__description { font-size: 1.5rem; }
 }

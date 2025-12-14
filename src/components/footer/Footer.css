@@ -1,0 +1,124 @@
+.site-footer {
+    position: relative;
+    background-color: #052033;
+    color: #cbd5e1;
+    padding: 4rem 2rem 2rem 2rem;
+    font-family: 'Segoe UI', Roboto, sans-serif;
+    border-top: 5px solid #f59e0b;
+    overflow: hidden;
+}
+
+.site-footer::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background-image: url('https://www.transparenttextures.com/patterns/cubes.png');
+    opacity: 0.05;
+    pointer-events: none;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 4rem;
+    align-items: start;
+    position: relative;
+    z-index: 2;
+}
+
+.brand-col { padding-right: 2rem; }
+
+.footer-logo {
+    font-size: 2.2rem;
+    font-weight: 800;
+    margin-bottom: 1.5rem;
+    color: #ffffff;
+    letter-spacing: -1px;
+}
+.footer-logo span { color: #f59e0b; }
+
+.footer-desc {
+    font-size: 1rem;
+    line-height: 1.8;
+    color: #94a3b8;
+}
+
+.links-col, .social-col {
+    display: flex;
+    flex-direction: column;
+}
+.links-col { align-items: center; }
+.social-col { align-items: flex-end; }
+
+.links-col ul {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+}
+.links-col li { margin-bottom: 0.8rem; }
+
+.links-col a {
+    font-size: 1.05rem;
+    color: #cbd5e1;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+.links-col a:hover { color: #f59e0b; }
+
+.links-col h4, .social-col h4 {
+    font-size: 1.2rem;
+    color: #ffffff;
+    margin-bottom: 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 700;
+}
+
+.social-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 10px 20px;
+    border-radius: 50px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    width: fit-content;
+    margin-bottom: 10px;
+}
+
+.social-btn:hover {
+    background-color: #f59e0b;
+    color: #052033;
+    transform: translateX(-5px);
+}
+
+.footer-bottom {
+    margin-top: 4rem;
+    padding-top: 2rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    text-align: center;
+    font-size: 0.9rem;
+    color: #64748b;
+    position: relative;
+    z-index: 2;
+}
+
+@media (max-width: 900px) {
+    .footer-container {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 3rem;
+    }
+    .brand-col, .links-col, .social-col {
+        align-items: center;
+        text-align: center;
+        width: 100%;
+    }
+    .social-col { align-items: center; }
+}
