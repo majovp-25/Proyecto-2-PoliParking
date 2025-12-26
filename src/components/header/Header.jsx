@@ -16,7 +16,7 @@ const Header = () => {
                     <li><a href="#contact">Contacto</a></li>
                     
                     <li><Link to="/login" className="nav-btn">Ingresar</Link></li>
-                    <li><Link to="/register" className="nav-btn highlight">Registrarse</Link></li>
+                    <li><Link to="/register" className="nav-btn highlight">Registrate</Link></li>
                 </ul>
             </nav>
             <Main />
