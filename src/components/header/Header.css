@@ -8,17 +8,23 @@ header {
     position: relative;
     font-family: 'Segoe UI', Roboto, sans-serif;
     border-bottom: 5px solid #f59e0b; 
-    box-sizing: border-box; 
+    box-sizing: border-box;
+    overflow: hidden;
 }
 
+/* Textura sutil institucional */
 header::before {
     content: '';
     position: absolute;
-    top: 0; left: 0; width: 100%; height: 100%;
+    inset: 0;
     background-image: url('https://www.transparenttextures.com/patterns/cubes.png'); 
     opacity: 0.1;
     pointer-events: none;
 }
+
+/* ============================= */
+/* NAVBAR */
+/* ============================= */
 
 .navbar__container {
     width: 90%;
@@ -31,6 +37,7 @@ header::before {
     align-items: center;
 }
 
+/* Logo */
 .navbar__logo {
     margin: 0;
     font-size: 2rem;
@@ -44,46 +51,97 @@ header::before {
     color: #f59e0b; 
 }
 
+/* ============================= */
+/* MENU */
+/* ============================= */
+
 .navbar__menu {
     list-style: none;
     display: none;
+    gap: 2rem;
+    align-items: center;
 }
 
+/* Links base */
 .navbar__menu a {
+    position: relative;
     color: #cbd5e1;
     font-size: 1.05rem;
     font-weight: 600;
     text-decoration: none;
-    transition: color 0.3s ease;
+    padding: 4px 0;
+    transition: color 0.25s ease, transform 0.25s ease;
 }
 
+/* Hover institucional */
 .navbar__menu a:hover {
     color: #f59e0b;
+    transform: translateY(-1px);
 }
+
+/* Subrayado animado */
+.navbar__menu a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 100%;
+    height: 2px;
+    background-color: #f59e0b;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.3s ease;
+}
+
+.navbar__menu a:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+/* ============================= */
+/* BOTONES */
+/* ============================= */
 
 .nav-btn {
-    padding: 0.5rem 1rem;
-    border-radius: 8px;
-    transition: all 0.3s ease;
+    padding: 0.55rem 1.2rem;
+    border-radius: 999px;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
+.nav-btn:hover {
+    transform: translateY(-1px);
+}
+
+/* Botón destacado */
 .highlight {
     background-color: #f59e0b;
     color: #052033 !important;
-    padding: 0.6rem 1.2rem;
-    border-radius: 50px;
+    font-weight: 700;
+    padding: 0.7rem 1.6rem;
 }
 
 .highlight:hover {
     background-color: #fbbf24;
-    transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(245, 158, 11, 0.3);
+    box-shadow: 0 6px 18px rgba(245, 158, 11, 0.35);
 }
 
-@media(min-width: 768px){
+/* ============================= */
+/* RESPONSIVE */
+/* ============================= */
+
+@media (min-width: 768px) {
     .navbar__menu {
         display: flex;
-        gap: 2rem;
-        align-items: center;
+    }
+}
+
+/* ============================= */
+/* ACCESIBILIDAD */
+/* ============================= */
+
+@media (prefers-reduced-motion: reduce) {
+    .navbar__menu a,
+    .nav-btn {
+        transition: none;
     }
 }

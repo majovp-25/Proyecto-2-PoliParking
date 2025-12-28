@@ -2,7 +2,7 @@ import './Main.css';
 
 export const Main = () => {
     return (
-        <main className='principal'>
+        <main className='principal main-animate'>
             <div className="principal__overlay"></div>
             <div className="principal__content">
                 <h1 className='principal__title'>
